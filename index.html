@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="A basic Web App built with JavaScript by Convenant University Students.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Bio-Payment-System</title>
+   
+    <!-- Disable tap highlight on IE -->
+        <meta name="msapplication-tap-highlight" content="no">
+    
+    <!-- Web Application Manifest -->
+    <link rel="manifest" href="manifest.json">
+   
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Bio-Payment-System"> <meta name="theme-color" content="#303F9F">
+    <!-- Add to homescreen for Safari on iOS -->
+    
+    <!-- Material Design Lite -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.orange- indigo.min.css">
+    <script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+    <linktype="text/css"rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+    
+    <!-- App Styling -->
+    <linkrel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,b olditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="styles/main2.css">
+    <style>
+    </style>
+</head>
+
+<body>
+    <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <!-- Header section containing logo -->
+        <header class="mdl-layout__header mdl-color-text--white mdl-color--red">
+            <div class="mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-grid">
+                <div class="mdl-layout__header-row mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-cell--12-col-desktop">
+                    <h4><i class="material-icons">chat_bubble_outline</i> Bio-POS Web Portal.</h4>
+                </div>
+                <div id="user-container">
+                    <div id="user-pic"></div>
+                    <div id="user-name"></div>
+                    <button id="sign-out" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl- color-text--white">Sign-out</button>
+                    <button id="sign-in" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color- text--white">
+                    <i class="material-icons">account_circle</i>Sign-in with Google
+                    </button>
+                </div>
+            </div>
+        </header>
+        <main class="mdl-layout__content mdl-color--grey-100"> 
+            <div id="messages-card-container" >
+                <!-- Messages container -->
+                <div id="messages-card" >
+                    <div >
+                        <div id="messages" style="overflow-x:auto;"></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <!-- Import and configure the Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-auth.js"></script> <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase.js"></script>
+    
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use https://firebase.google.com/docs/web/setup#available-libraries
+    <script src="https://www.gstatic.com/firebasejs/7.17.0/firebase- analytics.js"></script> -->
+    
+    <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIz*******************************e3A",
+        authDomain: "biometric-pos.firebaseapp.com", 
+        databaseURL: "https://biometric-pos.firebaseio.com", 
+        projectId: "biometric-pos",
+        storageBucket: "biometric-pos.appspot.com", 
+        messagingSenderId: "395068612718",
+        appId: "1:395******************************7f", 
+        measurementId: "G-V**************HW"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    //firebase.analytics();
+    </script>
+    <script src="scripts.js"></script> 
+</body>
+</html>
