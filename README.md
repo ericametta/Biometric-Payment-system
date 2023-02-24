@@ -6,3 +6,5 @@ The database component is hosted on google's firebase.
 
 The firmware is programmed in C++ with adafruit libraries.
 
+Updates currently being made to ...
+- login page
